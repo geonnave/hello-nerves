@@ -11,7 +11,7 @@ config :ui, Ui.Endpoint,
   secret_key_base: "IKa39sPjgUkVWVV98w1z14BkfYq+QiwlSYZu/9tUuuOhoqTHYimRaxXZbPG4NkwV",
   root: Path.dirname(__DIR__),
   server: true,
-  render_errors: [view: Ui.ErrorView, accepts: ~w(html json)],
+  render_errors: [view: Ui.ErrorView, accepts: ~w(html json)]
 
 # Configures Elixir's Logger
 config :logger, :console,

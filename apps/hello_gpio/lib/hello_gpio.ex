@@ -23,25 +23,19 @@ defmodule HelloGpio.Blinky do
     GenServer.start_link __MODULE__, [], name: __MODULE__
   end
 
-  def on, do: GenServer.cast(__MODULE__, :on)
-  def off, do: GenServer.cast(__MODULE__, :off)
+  def toggle, do: GenServer.cast(__MODULE__, :toggle)
 
   def init(_) do
     Logger.debug "Initializing.."
     {:ok, pin} = Gpio.start_link(@ledpin, :output)
     Gpio.write(pin, 1)
-    {:ok, pin}
+    {:ok, {pin, 1}}
   end
 
-  def handle_cast(:on, pin) do
-    Logger.debug "writing 1 to ledpin #{inspect pin}"
-    Gpio.write(pin, 1)
-    {:noreply, pin}
-  end
-
-  def handle_cast(:off, pin) do
-    Logger.debug "writing 0 to ledpin #{inspect pin}"
-    Gpio.write(pin, 0)
-    {:noreply, pin}
+  def handle_cast(:toggle, {pin, pin_state}) do
+    new_pin_state = if pin_state == 0, do: 1, else: 0
+    Logger.debug "writing #{new_pin_state} to ledpin #{inspect pin}"
+    Gpio.write(pin, new_pin_state)
+    {:noreply, {pin, new_pin_state}}
   end
 end
