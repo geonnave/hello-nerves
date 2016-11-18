@@ -1,0 +1,7 @@
+## Start the Elixir shell
+-name raspi@192.168.0.86
+-setcookie secret
+
+-noshell
+-user Elixir.IEx.CLI
+-extra --no-halt
