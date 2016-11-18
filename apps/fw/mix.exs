@@ -22,7 +22,7 @@ defmodule Fw.Mixfile do
   def application do
     [mod: {Fw, []},
      applications: [:logger, :runtime_tools,
-                    :hello_gpio,
+                    :hello_gpio, :ui,
                     :nerves_interim_wifi,
                     :nerves_firmware_http
                    ]]
@@ -31,6 +31,7 @@ defmodule Fw.Mixfile do
   def deps do
     [
       {:hello_gpio, in_umbrella: true},
+      {:ui, in_umbrella: true},
       {:nerves_interim_wifi, "~> 0.1.0"},
       {:nerves_firmware_http, github: "nerves-project/nerves_firmware_http"},
       {:nerves, "~> 0.3.0"}
