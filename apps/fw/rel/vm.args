@@ -1,5 +1,5 @@
 ## Start the Elixir shell
--name raspi@192.168.0.86
+-name raspi@192.168.43.144
 -setcookie secret
 
 -noshell

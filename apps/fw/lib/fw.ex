@@ -13,6 +13,10 @@ defmodule Fw do
   end
 
   def setup_network do
-    Nerves.InterimWiFi.setup "wlan0", ssid: "CITI", key_mgmt: :"WPA-PSK", psk: "1cbe991a14"
+    # Nerves.InterimWiFi.setup "wlan0", ssid: "CITI", key_mgmt: :"WPA-PSK", psk: "1cbe991a14"
+    Nerves.InterimWiFi.setup "wlan0",
+      ssid: "eu sei oqvc fez no verao passado",
+      key_mgmt: :"WPA-PSK",
+      psk: "3neeszombees"
   end
 end
