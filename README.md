@@ -1,6 +1,11 @@
 # Hello Nerves
 
-[Nerves Project](https://github.com/nerves-project)-based example used in my talk at the [elug_sp](https://www.meetup.com/elug_sp/) (São Paulo's Elixir User Group) meetup #7. It consists in a **phoenix app with a button to blink a led, that runs on a Rasperry Pi 3**. A summary of all its features:
+[Nerves Project](https://github.com/nerves-project)-based example used in my talk at the [elug_sp](https://www.meetup.com/elug_sp/) (São Paulo's Elixir User Group) meetup #7. It consists in a **phoenix app with a button to blink a led, that runs on a Rasperry Pi 3**.
+
+![project overview](https://raw.githubusercontent.com/geonnave/hello-nerves/master/priv/project-overview.png)
+**Note**: the positive wire of the LED goes on the **GPIO pin #26**. Check the Raspberry Pi 3 pinout [here](https://az835927.vo.msecnd.net/sites/iot/Resources/images/PinMappings/RP2_Pinout.png). The negative one goes to any **GND** (ground) pin.
+
+A summary of all its features:
 
 * toggle led on/off via gpio
 * phoenix app providing *ui* for controlling the led
@@ -13,7 +18,7 @@ Just run some pretty simple commands listed below.
 
 **Note 1**: you should have **Nerves** installled. Refer to the [official docs](https://hexdocs.pm/nerves/installation.html#content) to get it running.
 
-#### Go to the fw directory and install dependencies
+#### Go to the `apps/fw` directory and install dependencies
 ```
 cd apps/fw
 mix deps.get
