@@ -1,9 +1,8 @@
 # Hello Nerves
 
-[Nerves Project](https://github.com/nerves-project)-based example used in my talk at the [elug_sp](https://www.meetup.com/elug_sp/) (São Paulo's Elixir User Group) meetup #7. It consists in a **phoenix app with a button to blink a led, that runs on a Rasperry Pi 3**.
+[Nerves Project](https://github.com/nerves-project)-based example used in my talk at the [elug_sp](https://www.meetup.com/elug_sp/) (São Paulo's Elixir User Group) meetup #7. It consists in a **phoenix app with a button to blink a led, everything running on a Rasperry Pi 3**.
 
 ![project overview](https://raw.githubusercontent.com/geonnave/hello-nerves/master/priv/project-overview.png)
-**Note**: the positive wire of the LED goes on the **GPIO pin #26**. Check the Raspberry Pi 3 pinout [here](https://az835927.vo.msecnd.net/sites/iot/Resources/images/PinMappings/RP2_Pinout.png). The negative one goes to any **GND** (ground) pin.
 
 A summary of all its features:
 
@@ -17,6 +16,7 @@ A summary of all its features:
 Just run some pretty simple commands listed below. 
 
 **Note 1**: you should have **Nerves** installled. Refer to the [official docs](https://hexdocs.pm/nerves/installation.html#content) to get it running.
+**Note 2**: the positive wire of the LED goes on the **GPIO pin #26**. Check the Raspberry Pi 3 pinout [here](https://az835927.vo.msecnd.net/sites/iot/Resources/images/PinMappings/RP2_Pinout.png). The negative one goes to any **GND** (ground) pin.
 
 #### Go to the `apps/fw` directory and install dependencies
 ```
@@ -24,7 +24,7 @@ cd apps/fw
 mix deps.get
 ```
 
-**Note 2**: everything from now on assume you are working from the `apps/fw` directory.
+**Note 3**: everything from now on assume you are working from the `apps/fw` directory.
 
 #### Change your WiFi credentials
 Modify `lib/fw.ex` and change the `SSID` (the "name" of your network) and the password:
