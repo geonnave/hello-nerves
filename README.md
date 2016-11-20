@@ -1,6 +1,6 @@
 # Hello Nerves
 
-[Nerves Project](https://github.com/nerves-project)-based example used in my talk at the [elug_sp](https://www.meetup.com/elug_sp/) (São Paulo's Elixir User Group) meetup #7. It consists in a **phoenix app with a button to blink a led, everything running on a Rasperry Pi 3**.
+[Nerves Project](https://github.com/nerves-project)-based example used in my talk ([slides here](http://slides.com/geovanefedrecheski/elixir-of-iot-with-nerves#/)) at the [elug_sp](https://www.meetup.com/elug_sp/) (São Paulo's Elixir User Group) meetup #7. It consists in a **phoenix app with a button to blink a led, everything running on a Rasperry Pi 3**.
 
 ![project overview](https://raw.githubusercontent.com/geonnave/hello-nerves/master/priv/project-overview.png)
 
