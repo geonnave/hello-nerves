@@ -45,7 +45,7 @@ mix firmware.burn
 #### Just insert the sd card in the rpi3 and cross you fingers :D
 <img src="https://media1.popsugar-assets.com/files/thumbor/Vn3epuKRUZLRsec6Ww1mzyOfJAA/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2014/07/28/909/n/1922507/740abf9ac5c2563e_fingers-crossed/i/Fingers-Crossed.jpg" alt="cross-fingers" width="100">
 
-If the led light up, it worked.
+If the led light up, it worked. The phoenix web interface shall also be available at `http://<board's ip address>:4000`.
 
 **tip**: the easiest way to get to know your IP Address is to use an HDMI cable to connect the rpi3 to a monitor, and then watch the logs for the *dhcp* updates.
 
