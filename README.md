@@ -10,12 +10,14 @@ A summary of all its features:
 * phoenix app providing *ui* for controlling the led
 * *wifi*-enabled, via https://github.com/nerves-project/nerves_interim_wifi
 * *firmware-over-the-air* updates available, via https://github.com/nerves-project/nerves_firmware_http
-* vm.args configured with sample `name` and `cookie` for facilitating remote board debugging
+* ready for remote board debugging
+ * vm.args configured with sample `name` and `cookie`; `:runtime_tools` included in the `applications` list
 
 # Running
 Just run some pretty simple commands listed below. 
 
 **Note 1**: you should have **Nerves** installled. Refer to the [official docs](https://hexdocs.pm/nerves/installation.html#content) to get it running.
+
 **Note 2**: the positive wire of the LED goes on the **GPIO pin #26**. Check the Raspberry Pi 3 pinout [here](https://az835927.vo.msecnd.net/sites/iot/Resources/images/PinMappings/RP2_Pinout.png). The negative one goes to any **GND** (ground) pin.
 
 #### Go to the `apps/fw` directory and install dependencies
@@ -73,3 +75,5 @@ You will drop to the board's shell.
 iex --name host2@192.168.0.6 --cookie secret
 ```
 You will drop to a normal iex shell. Then run `:observer.start`. A GUI interface will open. In that GUI, go to `Nodes`->`connect`. Insert the *name* of the node, i.e the string after `-name` option in the `rel/vm.args` file. If everything is correct, it should connect and you will be able to see the apps in the *Applications* tab.
+
+*For your information*, the remote `observer` feature only works because `:runtime_tools` is included in the `applications` list.
