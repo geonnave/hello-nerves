@@ -1,3 +1,7 @@
+# NOTE OF DEPRECATION
+
+Please note that, as the Nerves Project has been evolving a lot, this project and its examples won't work anymore with latest versions.
+
 # Hello Nerves
 
 [Nerves Project](https://github.com/nerves-project)-based example used in my talk ([slides here](http://slides.com/geovanefedrecheski/elixir-of-iot-with-nerves#/)) at the [elug_sp](https://www.meetup.com/elug_sp/) (São Paulo's Elixir User Group) meetup #7. It consists in a **phoenix app with a button to blink a led, everything running on a Rasperry Pi 3**.
